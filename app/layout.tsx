@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+import QueryProvider from "@/providers/QueryProvider"
 
 export const metadata: Metadata = {
   title: "Severance - Practice Backend Questions & Learn by Doing",
@@ -30,7 +31,12 @@ html {
         `}</style>
       </head>
       <body>
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        
+        <QueryProvider>
+          <Suspense fallback={<div>Loading...</div>}>
+            {children}
+          </Suspense>
+        </QueryProvider>
         <Analytics />
       </body>
     </html>

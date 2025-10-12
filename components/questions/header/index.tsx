@@ -8,7 +8,7 @@ import { headerLinks } from '@/constants/header'
 import { BellDot } from 'lucide-react'
 import avatarPlaceholder from "@/public/placeholder-user.jpg"
 import { Avatar, AvatarImage } from '@/components/ui/avatar'
-const AssignmentHeader = () => {
+const QuestionHeader = () => {
   const pathname = usePathname()
   return (
     //main wrapper
@@ -18,8 +18,9 @@ const AssignmentHeader = () => {
             {/* logo and pages section */}
             <div className='flex items-center gap-6'>
                 {/* logo  */}
-                <Image src={logo} alt='logo' height={10} width={10} className=' h-12 w-12' />
 
+                {/* <Image src={logo} alt='logo' height={10} width={10} className=' h-12 w-12' /> */}
+                    <span className=' text-xl text-foreground  font-medium'>Severance</span>
                 {/* pages */}
                 <div className=' flex gap-4'>
                     {
@@ -53,4 +54,4 @@ const AssignmentHeader = () => {
   )
 }
 
-export default AssignmentHeader
+export default QuestionHeader
